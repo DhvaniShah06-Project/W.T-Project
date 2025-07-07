@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendence Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        #writeAttendence {
+            margin-top: 5px;
+            background-color: yellow;
+            color: black;
+            border-radius: 70px;
+            border-color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        button {
+            border-radius: 50px;
+            background-color: white;
+            border-color: white;
+        }
+
+        #resetAttendence {
+            background-color: blue;
+            color: white;
+            margin-left: 40px;
+            border-radius: 70px;
+            border-color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        button:hover {
+            scale: 1.2;
+
+
+        }
+
+
+        body {
+            margin: 20px;
+            padding: 5px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; padding-top: 45px; font-weight: bolder; ">Attendence Tracker</h1>
+
+    <script>
+        presentNos = 0;
+        absentNos = 0;
+        p = 0;
+        k = 0;
+        present = [];
+        absent = [];
+        StudentList = ["IRON MAN", "CAPTAIN AMERICA", "NATASHA", "THOR", "CAPTAIN MARVEL",
+            "SCARLET WITCH", "VISION", "SPIDER MAN", "JEAN GREY", "THANOS"]
+        document.write("<table class='table table-success table-bordered'>");
+        document.write("<thead class='table-dark'>")
+        document.write("<th>Roll Number</th>")
+        document.write("<th>Name</th>")
+        document.write("<th >Status</th>")
+        document.write("<th>Mark</th>")
+        document.write("</thead>");
+
+        for (i = 0, j = 101; i < StudentList.length; i++, j++) {
+            document.writeln(`<tr id='styleRow-${i}'>`);
+            document.write("<td>{" + j + "}</td>")
+            document.write(`<td>${StudentList[i]}</td>`);
+            document.write(`<td><h5 id = 'status-${i}''>Pending...</h5></td>`);
+            document.write(`<td><button id='presentBtn-${i}' onclick='markPresent(${i})'>Present</button>   
+        <button  id='absentBtn-${i}' onclick='markAbsent(${i})'>Absent</button></td>`);
+            document.write("</td>");
+            document.write("</tr>");
+
+        }
+        document.write("</table>")
+
+        function markPresent(i) {
+            let roll = i + 101;
+            let index = absent.indexOf(roll);
+            if (index!== -1) {
+        absent.splice(index, 1);
+        absentNos--;
+        let absentBtn = document.getElementById(`absentBtn-${i}`);
+        absentBtn.style.backgroundColor = "white";
+        absentBtn.style.color = "black";
+    }
+    
+    if (!present.includes(roll)) {
+        present.push(roll);
+        presentNos++;
+    }
+            speak(roll);
+            changeColor();
+            let presentBtn = document.getElementById(`presentBtn-${i}`);
+            let rowRef = document.getElementById(`styleRow-${i}`);
+            let statusRef = document.getElementById(`status-${i}`);
+            statusRef.innerHTML = "&#x2705;";
+            rowRef.style.backgroundColor = "lightgrey";
+            presentBtn.style.backgroundColor = "green";
+            presentBtn.style.color = "white";
+            presentBtn.style.borderRadius = "70px";
+            document.getElementById("absentno").innerHTML = "Absent : " + absentNos;
+            document.getElementById("presentno").innerHTML = "Present : " + presentNos;
+
+
+        }
+        function markAbsent(i) {
+            let roll = i + 101;
+            index = present.indexOf(roll);
+            absentref = document.getElementById(`absentBtn-${i}`);
+            let presentref = document.getElementById(`presentBtn-${i}`);
+            if (index !== -1) {
+                present.splice(index, 1);
+                presentNos--;
+                presentref.style.backgroundColor = "white";
+                presentref.style.color = "black";
+                
+            }
+            if (!absent.includes(roll)) {
+                absent.push(roll);
+                absentNos++;
+            }
+            
+            speak(roll);
+            imgRef = document.getElementById(`status-${i}`);
+            imgRef.innerHTML = "&#10060;"
+            ref = document.getElementById(`styleRow-${i}`);
+            absentref.style.backgroundColor = "red";
+            absentref.style.color = "white";
+            ref.style.backgroundColor = "lightgrey";
+            absentref.style.borderRadius = "70px";
+            document.getElementById("absentno").innerHTML = "Absent : " + absentNos;
+            document.getElementById("presentno").innerHTML = "Present : " + presentNos;
+        }
+
+
+
+        document.write("<button id = 'writeAttendence' onclick='finalAttendence()'>Take Attendence</button>")
+        document.write("<button id = 'resetAttendence' onclick='markallAbsent()'>Reset Attendence</button>");
+
+        function markallAbsent() {
+            changeColor();
+            presentNos = 0;
+            absentNos = 0;
+            p = 0;
+            k = 0;
+            present = [];
+            absent = [];
+
+            for (let i = 0, j = 1; i < StudentList.length; i++) {
+
+                abcRef = document.getElementById(`status-${i}`);
+                abcRef.innerHTML = "Pending..."
+                let presentBtn = document.getElementById(`presentBtn-${i}`);
+                presentBtn.style.backgroundColor = "white";
+                presentBtn.style.color = "";
+                presentBtn.style.borderRadius = "70px";
+
+                let absentBtn = document.getElementById(`absentBtn-${i}`);
+                absentBtn.style.backgroundColor = "white";
+                absentBtn.style.color = "";
+                absentBtn.style.borderRadius = "70px";
+
+
+            }
+
+            finalAttendence();
+            document.getElementById("presentno").innerHTML = "Present : 0";
+            document.getElementById("absentno").innerHTML = "Absent : 0";
+
+
+        }
+
+        function finalAttendence() {
+            changeColor();
+            output = "<br>Present Roll Number: " + present.join(", ");
+            output += "<br>Absent Roll Number: " + absent.join(", ");
+            document.getElementById("summary").innerHTML = output;
+            saveToNotepad("Attendance Absent Number : " + new Date().toLocaleDateString() + ".txt", absent);
+        }
+        function changeColor() {
+            r = Math.floor(Math.random() * 255);
+            g = Math.floor(Math.random() * 255);
+            b = Math.floor(Math.random() * 255);
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        }
+        function speak(roll) {
+    const speech = new SpeechSynthesisUtterance(roll);
+    speech.lang = "en-US";
+    speech.rate = 5; // 1 is normal speed; try 1.5 for faster, up to 10
+    window.speechSynthesis.speak(speech);
+}
+function saveToNotepad(filename,output ) {
+    const blob = new Blob([output], { type: "text/plain" });
+    const link = document.createElement("a");
+    link.download = "filename";
+    link.href = window.URL.createObjectURL(blob);
+    link.click();
+}
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <h6 id="summary" style="color: white;"></h6>
+    <h5 id="presentno">Present : 0</h5>
+    <h5 id="absentno">Absent : 0</h5>
+</body>
+
+</html>
+
+<!-- // document.getElementById("resetAttendence").disabled = false;
+// if (!absent.includes(name) && !present.includes(name)) {
+            //     document.getElementById(`presentBtn-${i}`).disabled = true;
+            //     document.getElementById(`absentBtn-${i}`).disabled = true;
+            //     ref = document.getElementById(`styleRow-${i}`);
+            //     ref.style.backgroundColor = "lightgrey";
+} -->
+<!-- /* if (!present.includes(name) && !absent.includes(name)) {
+                document.getElementById(`presentBtn-${i}`).disabled = true;
+                document.getElementById(`absentBtn-${i}`).disabled = true;
+                present[p++] = [i + 101];
+                presentNos++;
+                document.getElementById("resetAttendence").disabled = false;*/ -->
