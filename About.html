@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('data:image/jpeg;base64,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');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body style="margin: 20px;">
+    <nav class="navbar bg-info sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://images.squarespace-cdn.com/content/v1/5a12cfb1cf81e08b62ab6535/1578499190047-Q2R9PDXJXX25U51GKNSV/carpool.png"
+                    width="30" height="24" class="d-inline-block align-text-top">
+                Ride In
+            </a>
+
+            <ul class="nav nav-pills justify-content-end">
+                <li class="nav-item ">
+                    <div class="container-fluid">
+
+                        <a class="nav-link text-dark " aria-current="page" href="http://127.0.0.1:5500/Home.html">Home
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg></a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="container-fluid">
+                        <a class="nav-link active " href="http://127.0.0.1:5500/About.html">About
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="container-fluid">
+                        <a class="nav-link text-dark" href="http://127.0.0.1:5500/SearchRide.html">Search Ride
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </li>
+
+                 <li class="nav-item">
+                    <div class="container-fluid">
+                        <a class="nav-link text-dark" href="http://127.0.0.1:5500/ShareRide.html">Offer Ride
+                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-car-front-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM3 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2m10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM2.906 5.189a.51.51 0 0 0 .497.731c.91-.073 3.35-.17 4.597-.17s3.688.097 4.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 11.691 3H4.309a.5.5 0 0 0-.447.276L2.906 5.19Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="container-fluid">
+                        <a class="nav-link text-dark" href="http://127.0.0.1:5500/Contact%20Us.html">Contact Us
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+                   <li class="nav-item">
+                    <div class="container-fluid">
+                        <a class="nav-link text-dark" href="http://127.0.0.1:5500/profile.html">My Profile
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                        </a>
+                    </div>
+                </li>
+              
+            </ul>
+        </div>
+    </nav>
+    <div class="info">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img src="https://www.cartoq.com/wp-content/uploads/2023/09/carpool-app-bengaluru-2.jpg"
+                        class="d-block w-100  me-5 mt-5" alt="Loading" style="height: 375px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-weight: bolder;margin-left: 50px; font-size:45px;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px rgb(41, 7, 121),
+    0 0 20px rgb(80, 59, 158),
+    0 0 40px #0ff,
+    0 0 80px #0ff;">Enjoyable
+                            And Affordable
+                        </h5>
+                        <p style="color: rgb(227, 65, 92);font-weight: 720;">Satisfactory Ride<br> With Great Travel Experience </p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://media.istockphoto.com/id/1941471617/photo/young-asian-woman-traveling-in-the-downtown-city-with-taxi-driver-service-female-passenger.jpg?s=612x612&w=0&k=20&c=Wh2Dya-5QptOjdNNZ7NIksJ6VuXudm2v47sY40oIBbM="
+                        class="d-block w-100 me-5 mt-5" alt="Loading" style="height: 375px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-weight: bolder; color:white;font-size:45px;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px rgb(41, 7, 121),
+    0 0 20px rgb(80, 59, 158),
+    0 0 40px #0ff,
+    0 0 80px #0ff;">Women Safety</h5>
+                        <p style="color: rgb(227, 65, 92);font-weight: 720;">Safe And Secure Ride For Women</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="https://media.istockphoto.com/id/465466681/photo/happy-taxi-driver.jpg?s=612x612&w=0&k=20&c=3jw6Eb6m7m5s-xHD6zen045feY-qvDW8R_j4MoJt0X0="
+                        class="d-block w-100 mt-5" alt="Loading" style="height: 375px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-weight: bolder; font-size:45px;
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px rgb(41, 7, 121),
+    0 0 20px rgb(80, 59, 158),
+    0 0 40px #0ff,
+    0 0 80px #0ff;">Happy Ride</h5>
+                        <p style="color: rgb(227, 65, 92);font-weight: 720;">100% Safety Guaranteed</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="aboutus">
+        <h2 style="text-align: center; text-decoration: underline;"><b>Why Choose Ride in</b></h2>
+        <h3><b>Ensuring Your Peace of Mind on Every Ride</b></h3>
+        <p>Provides Safety To Women. Easily Accessible and user Friendly.A community-driven carpool platform that brings
+            together
+            commuters with shared routes and values—saving costs, time, and the environment.
+            At RideIn, we believe every journey is an opportunity to connect, conserve, and make life a little easier.
+            Born from a simple idea—why drive alone when you could share the ride we have built a platform that
+            transforms daily travel into shared experiences.
+            Whether you're commuting to work, heading out of town, or just making a quick run across the city, our
+            carpooling community brings people together to cut costs, reduce traffic, and lighten our carbon footprint.
+            Safety, reliability, and friendliness are the gears that drive us forward.
+            We are more than just a ride-sharing solution—we are a movement towards smarter mobility. Join us and be
+            part
+            of a growing network that puts people, planet, and practical travel first. Every ride counts. Every rider
+            matters
+        <h2><b>History Of RideIn</b></h2>
+        <p>RideIn was founded in 2022 with the mission to make commuting easier and more sustainable. Our platform
+            started as a small community of carpoolers and has since grown into a comprehensive solution for shared
+            transportation. We have continuously evolved our services based on user feedback and changing mobility
+            needs.The Platform at which we are standing today is because of immense patience and dedication as well as
+            support from our employees. Without them we wouldn't be here today.</p>
+    </div>
+    <div class="certificate">
+        <div class="card-group">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/v2/D5622AQE70FOzXe5AHQ/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1692206707744?e=2147483647&v=beta&t=H2lnvqTr65rF_yjW-l2ye7_XpO3IiEJNPx7Gh5163i8"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Certified By Authority</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7q2ZzFWttBAvrXnWSkrjnHJml034q3zlsMQ&s"
+                    class="card-img-top" alt="Loading">
+                <div class="card-body">
+                    <h5 class="card-title">Trusted By Public</h5>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://www.shutterstock.com/image-vector/award-certificate-star-design-blue-600nw-2520073301.jpg"
+                    class="card-img-top" alt="Loading">
+                <div class="card-body">
+                    <h5 class="card-title">Prestigious Certification</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="feedback">
+
+        <h2 style="text-align: center; text-decoration: underline;"><b>Valuable Feedback From Users</b></h2>
+
+        <div class="card text-bg-primary">
+            <div class="card-header">
+                Feedback
+            </div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>Sharing driving duties or simply relaxing as a passenger can ease the daily commute.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer" style="color: white;">
+                        From John <cite title="Source Title"></cite>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+
+        <div class="card mt-2 text-bg-secondary">
+            <div class="card-header">
+                Feedback
+            </div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p>I enjoyed the chance to connect with coworkers or neighbors during the ride.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer" style="color: white;">
+                        From Mary <cite title="Source Title"></cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="card mt-2 text-bg-warning">
+            <div class="card-header ">
+                Feedback
+            </div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p> I appreciate the convenience and cost-effectiveness of carpooling.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer" style="color: black;">
+                        From Alex <cite title="Source Title"></cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <div class="card mt-2 text-bg-success">
+            <div class="card-header">
+                Feedback
+            </div>
+            <div class="card-body">
+                <figure>
+                    <blockquote class="blockquote">
+                        <p> The platform made it easy to find reliable rides and drivers.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer" style="color: white;">
+                        From Lisa <cite title="Source Title"></cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+    </div>
+
+    <footer style="background-color: black; color: white; margin-top: 55px; border-radius: 15px;">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          <h5  style="margin-top: 15px;">About Us</h5>
+          <p>We’re a community-focused platform promoting sustainable travel through carpooling.</p>
+        </div>
+
+        <div class="col">
+          <h5 style="margin-top: 15px;">Terms And Policies</h5>
+          License<br>Terms And Conditions
+        </div>
+        <div class="col">
+          <h5  style="margin-top: 15px;">Privacy Policies</h5>
+          Data Sharing<br>User Rights<br>Policy Updates
+        </div>
+        <div class="col">
+          <h5  style="margin-top: 15px;">Contact</h5>
+          <p>Email: support@carpoolhub.com</p>
+          <p> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg> +91 98765 43210</p>
+          <p class="card-text"><a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                fill="currentColor" class="bi bi-twitter-x text-white" viewBox="0 0 16 16">
+                <path
+                  d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+              </svg></a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-facebook text-white ms-3" viewBox="0 0 16 16">
+                <path
+                  d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+              </svg></a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-instagram text-white ms-3" viewBox="0 0 16 16">
+                <path
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+              </svg></a>
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                class="bi bi-whatsapp text-white ms-3" viewBox="0 0 16 16">
+                <path
+                  d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+              </svg></a>
+          </p>
+
+        </div>
+
+      </div>
+      &copy;2025 All Rights Reserved
+    </div>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
